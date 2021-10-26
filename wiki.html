@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia dummy</title>
+    <style>
+        .full-page {
+            background-color: darkgray;
+            grid-template-columns: 80px 1fr;
+            grid-auto-rows: minmax(1px, auto);
+            column-gap: 5px;
+            row-gap: 5px;
+            display: grid;
+        }
+
+        .sidebar {
+            background-color: beige;
+            grid-row: 1 / 4;
+
+        }
+
+        .feauture {
+            background-color: mediumseagreen;
+        }
+
+        .news {
+            background-color: orange;
+        }
+        
+        .picture {
+            background-color: red;
+            grid-column: 2 / 3;
+        }
+        
+        img {
+            width: 80%;
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .full-page {
+                grid-template-columns: 100px 1fr 1fr;                
+            }
+            .sidebar {
+                grid-row: 1 / 3;
+            }
+            .news {
+                background-color: mediumaquamarine;
+            }
+            .picture {
+                background-color: mediumpurple;
+                grid-column: 2 / 4;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="full-page">
+        <div class="sidebar">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/1200px-Wikipedia-logo-v2-en.svg.png">
+            <ul>
+                <li>Foo</li>
+                <li>Foo</li>
+                <li>Foo</li>
+                <li>Foo</li>
+                <li>Foo</li>
+                <li>Foo</li>
+            </ul>
+            <ul>
+                <li>Foo</li>
+                <li>Foo</li>
+                <li>Foo</li>
+                <li>Foo</li>
+                <li>Foo</li>
+                <li>Foo</li>
+            </ul>
+        </div>
+        <div class="feauture">
+            <h1>Feature</h1>
+            <h1>Other heading</h1>
+        
+        </div>
+        <div class="news">News</div>
+        <div class="picture">Picture</div>
+    </div>
+</body>
+
+</html>
